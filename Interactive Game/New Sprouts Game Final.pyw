@@ -27,7 +27,7 @@ import pandas as pd
 from threading import Thread
 from tkPDFViewer import tkPDFViewer as pdf 
 import pyautogui as pg
-sys.path.append(r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Path-Finding Notebooks")
+sys.path.append(r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Path-Finding Notebooks")
 sprouts_regions = __import__("sprouts_regions")
 sprouts_planarity = __import__("sprouts_planarity")
 sprouts_path = __import__("sprouts_path_finder")
@@ -74,9 +74,9 @@ class smooth_fix:
         self.root.resizable(False, False)
         self.canvas.pack()
         self.canvas.focus_set()
-        self.img = tk.PhotoImage(file = r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Resources\Sprouts New Logo.png")          
+        self.img = tk.PhotoImage(file = r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Resources\Sprouts New Logo.png")          
         
-        root.iconbitmap(True, r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Resources\Sprouts New Logo.ico")
+        root.iconbitmap(True, r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Resources\Sprouts New Logo.ico")
 
         menubar = tk.Menu(self.root)
 
@@ -297,7 +297,7 @@ class smooth_fix:
         self.v1.img_object_li.clear()
   
         # Adding pdf location and width and height. 
-        self.v2 = self.v1.pdf_view(self.main_help_area, pdf_location = r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Resources\Sprouts Rules.pdf",
+        self.v2 = self.v1.pdf_view(self.main_help_area, pdf_location = r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Resources\Sprouts Rules.pdf",
                          width = 85, height = 110) 
         
         # Placing Pdf in my gui. 
@@ -338,7 +338,7 @@ class smooth_fix:
         self.v3.img_object_li.clear()
         
         # Adding pdf location and width and height. 
-        self.v4 = self.v3.pdf_view(self.main_about_area, pdf_location = r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Resources\Sprouts Overview.pdf",
+        self.v4 = self.v3.pdf_view(self.main_about_area, pdf_location = r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Resources\Sprouts Overview.pdf",
                          width = 85, height = 110) 
         
         # Placing Pdf in my gui. 
@@ -391,11 +391,11 @@ class smooth_fix:
             # self.draw_bound()
             # computer_module.save_g(self.play, self.main_stor, self.point_stor, self.degrees, self.left_x, self.top_y)
 
-            # self.image_grab(event, r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Computer Junk\Computer Data\Graph.png")
+            # self.image_grab(event, r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Computer Junk\Computer Data\Graph.png")
             # self.point_view(event)
             # self.text_view(event)
             # self.canvas.update()
-            # self.image_grab(event, r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Computer Junk\Computer Data\Plain.png")
+            # self.image_grab(event, r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Computer Junk\Computer Data\Plain.png")
             # self.point_view(event)
             # self.text_view(event)
             # self.canvas.update()
@@ -422,11 +422,11 @@ class smooth_fix:
             self.draw_bound()
             computer_module.save_g(self.play, self.main_stor, self.point_stor, self.degrees, self.left_x, self.top_y)
 
-            self.image_grab(event, r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Computer Junk\Computer Data\Graph.png")
+            self.image_grab(event, r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Computer Junk\Computer Data\Graph.png")
             self.point_view(event)
             self.text_view(event)
             self.canvas.update()
-            self.image_grab(event, r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Computer Junk\Computer Data\Plain.png")
+            self.image_grab(event, r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Computer Junk\Computer Data\Plain.png")
             self.point_view(event)
             self.text_view(event)
             self.canvas.update()
@@ -528,11 +528,11 @@ class smooth_fix:
                 self.draw_bound()
                 computer_module.save_g(self.play, self.main_stor, self.point_stor, self.degrees, self.left_x, self.top_y)
 
-                self.image_grab(event, r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Computer Junk\Computer Data\Graph.png")
+                self.image_grab(event, r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Computer Junk\Computer Data\Graph.png")
                 self.point_view(event)
                 self.text_view(event)
                 self.canvas.update()
-                self.image_grab(event, r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Computer Junk\Computer Data\Plain.png")
+                self.image_grab(event, r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Computer Junk\Computer Data\Plain.png")
                 self.point_view(event)
                 self.text_view(event)
                 self.canvas.update()
@@ -599,7 +599,7 @@ class smooth_fix:
     def start_drawing(self, event):
         self.length = False
         self.canvas.focus_set()
-        if not (self.computer and (self.play %2 + 1) == self.computer_play):
+        if not (self.computer and (self.play %2 + 1) == self.computer_play) and not((self.computer == True) and self.player_turn == False and (self.play %2 + 1) == self.computer_play and not self.is_drawing):
             print('yep')
             print('* * * * *')
             print('play: ', self.play + 1)
@@ -947,7 +947,7 @@ class smooth_fix:
             for point in self.point_stor:
                 all_points.append((point[0] - self.left_x, point[1] - self.top_y))
             print(final_image_points)
-            with open(r'C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Data\sprouts_points.csv', 'a') as f_object:
+            with open(r'C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Data\sprouts_points.csv', 'a') as f_object:
                 writer_object = writer(f_object)
             
                 writer_object.writerow([str(final_image_points), str(self.spec_image_points), str(all_points)])
@@ -971,11 +971,11 @@ class smooth_fix:
             print('Saved as Graph ' + str(self.ret_save))
             self.root.title('Game of Sprouts' + ' - Graph ' + str(self.ret_save))
 
-            self.image_grab(event, r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Saved Graphs\Graph " + str(self.ret_save) + r"\Graph.png")
+            self.image_grab(event, r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Saved Graphs\Graph " + str(self.ret_save) + r"\Graph.png")
             self.point_view(event)
             self.text_view(event)
             self.canvas.update()
-            self.image_grab(event, r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Saved Graphs\Graph " + str(self.ret_save) + r"\Plain.png")
+            self.image_grab(event, r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Saved Graphs\Graph " + str(self.ret_save) + r"\Plain.png")
             self.point_view(event)
             self.text_view(event)
             self.canvas.update()
@@ -1095,7 +1095,7 @@ class smooth_fix:
         print('* * * * * * *')
         print(cond)
         if cond == False:
-            graph_path = askdirectory(title='Select Folder', initialdir = r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Saved Graphs")
+            graph_path = askdirectory(title='Select Folder', initialdir = r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Saved Graphs")
         elif cond == True:
             print('testcase')
             # self.home_window.lower(self.root)
@@ -1104,7 +1104,7 @@ class smooth_fix:
         elif cond == 'Alt':
             self.canvas.focus_set()
             self.home_window.destroy()
-            graph_path = askdirectory(title='Select Folder', initialdir = r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Saved Graphs")
+            graph_path = askdirectory(title='Select Folder', initialdir = r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Saved Graphs")
         
         self.canvas.focus_set()
         if len(graph_path) == 0:
@@ -1647,8 +1647,8 @@ class smooth_fix:
         but_canvas.pack(side=tk.TOP, fill=tk.BOTH)
 
 
-        open_img = Image.open(r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Resources\Open Part.png").convert('RGBA')      
-        open_fld = Image.open(r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Resources\Open Folder.png").convert('RGBA')      
+        open_img = Image.open(r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Resources\Open Part.png").convert('RGBA')      
+        open_fld = Image.open(r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Resources\Open Folder.png").convert('RGBA')      
         I2 = ImageDraw.Draw(open_img)
         # myFont = ImageFont.truetype('FreeMono.ttf', 15)
         I2.text((60, 10), 'Graph', font = ImageFont.truetype("segoeui.ttf", 16), fill =(0, 0, 0))
@@ -1689,7 +1689,7 @@ class smooth_fix:
         gall_button.pack(side=tk.LEFT, anchor = 'ne', pady=7, padx = (650, 0))
 
         
-        image_folder = r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Saved Graphs"
+        image_folder = r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Saved Graphs"
         canvas = tk.Canvas(home_frame, bd=0, highlightthickness=0, height = 180)
         frame = tk.Frame(canvas)
         canvas.create_window((0, 0), window=frame, anchor=tk.NW)
@@ -1698,7 +1698,7 @@ class smooth_fix:
         canvas.pack(side=tk.TOP, fill=tk.BOTH)
 
         canvas.config(xscrollcommand=scrollbar.set)
-        rec_dir = r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Saved Graphs\recent.csv"
+        rec_dir = r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Saved Graphs\recent.csv"
 
         #load recent
 
@@ -1750,7 +1750,7 @@ class smooth_fix:
                 img = ImageOps.pad(img2, (120, 120), color=(240, 240, 240))
                 img = ImageOps.expand(img, 20, fill=(240, 240, 240))
                 img = img.convert('RGBA')
-                graph_cover = Image.open(r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Resources\Sprouts Cover.png").convert('RGBA')      
+                graph_cover = Image.open(r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Resources\Sprouts Cover.png").convert('RGBA')      
                 result = Image.alpha_composite(img, graph_cover)
              
                 I1 = ImageDraw.Draw(result)
@@ -1795,8 +1795,8 @@ class smooth_fix:
         additional_label.pack(side=tk.TOP, pady=10, padx=10,  anchor = 'w')
 
 
-        help_img = Image.open(r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Resources\Help Part.png").convert('RGBA')      
-        info_img = Image.open(r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Resources\Info Part.png").convert('RGBA')      
+        help_img = Image.open(r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Resources\Help Part.png").convert('RGBA')      
+        info_img = Image.open(r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Resources\Info Part.png").convert('RGBA')      
         I5 = ImageDraw.Draw(help_img)
         I5.text((60, 10), 'Help', font = ImageFont.truetype("segoeui.ttf", 16), fill =(0, 0, 0))
         I6 = ImageDraw.Draw(info_img)
@@ -1813,7 +1813,7 @@ class smooth_fix:
         info_btn.image = info_img
         info_btn.pack(side=tk.LEFT, padx=(40, 10), pady=(5, 10), anchor='n')
 
-        logo_img = Image.open(r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Resources\Sprouts Logo Transparent.png").convert('RGBA')      
+        logo_img = Image.open(r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Resources\Sprouts Logo Transparent.png").convert('RGBA')      
         logo_img = ImageTk.PhotoImage(logo_img)
         logo_btn = tk.Button(home_frame, image=logo_img, bd=0, highlightthickness=0)
         logo_btn.image = logo_img
@@ -1832,7 +1832,7 @@ class smooth_fix:
         #     # r_canvas.create_window((0, 0), window=r_frame, anchor=tk.NW)
         #     # r_canvas.pack(side=tk.TOP)
 
-        image_folder = r"C:\Users\2000039241\OneDrive - Fulton County Schools\Desktop\Sprouts-main\Saved Graphs"
+        image_folder = r"C:\Users\zinnu\OneDrive\Desktop\Sprouts-main\Saved Graphs"
         rec_canvas = tk.Canvas(recent_frame, bd=0, highlightthickness=0, height = 550)
         rec_frame = tk.Frame(rec_canvas)
         rec_canvas.create_window((0, 0), window=rec_frame, anchor=tk.NW)
